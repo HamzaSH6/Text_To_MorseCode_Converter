@@ -25,22 +25,20 @@ while True:
         option = int(input("\n1) Text to Morse Code Converter\n"
                            "2) Morse Code To Text Converter\n"
                            "3) Exit\n"
-                           "Choose Converter Mode (Type Number of the Option): "))
+                           "Choose Converter Mode (Type Option Number): "))
 
         # Text to Morse Code Converter
         if option == 1:
             string = input("Text: ").lower().replace(" ", "")
             a_string = s_alpha(string)
-
-            for s in a_string:
-                print(morse_code[s], end=" / ")
-            print(" ")
+            print(" / ".join(morse_code[s] for s in a_string))
 
         # Morse Code To Text Converter
         elif option == 2:
             try:
-                morse = input("Morse Code (separate by space): ")
-                a_morse = s_code(morse.split(" "))
+                morse = input("Morse Code (remove any spaces and only separate each word/code by space): ")
+                clean_morse = morse.replace(" / ", " ")
+                a_morse = s_code(clean_morse.split())
 
                 for m in a_morse:
                     print(alphabets[m], end="")
@@ -49,10 +47,8 @@ while True:
 
         # Exit the Program
         elif option == 3:
-            print("Program Closed/Stopped Successfully!")
+            print("Program Closed Successfully!")
             exit()
-        # elif type(option) is str():
-        #     print("Invalid Choice Insert a Number, Choose Again")
         else:
             print("Invalid Number Choice, Choose Again")
     except ValueError:

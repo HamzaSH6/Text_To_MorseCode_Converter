@@ -3,6 +3,8 @@
 
 A simple Python project that converts plain text and numbers into Morse code and converts Morse code to text
 
+*Originally created as a simple project and later refined.*
+
 ### 🔥Features:
 - Convert Text → Morse Code
 - Convert Morse Code → Text
@@ -19,13 +21,15 @@ hamzash6
 
 **Output:**
 ```text
-•••• / •— / — — / — —•• / •— / ••• / •••• / —•••• /
+•••• / •— / — — / — —•• / •— / ••• / •••• / —••••
 ```
 
 ### Morse Code to Text:
 **Input:**
 ```text
 •••• •— —— ——•• •— ••• •••• —••••
+or
+•••• / •— / —— / ——•• / •— / ••• / •••• / —••••
 ```
 
 **Output:**
